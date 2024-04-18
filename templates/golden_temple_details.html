@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Temple Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            width: 800px;
+            height: 533.6px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Golden Temple - Amritsar, Punjab</h1>
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='Golden_temple.jpg') }}" alt="Golden Temple">
+        </div>
+        <p>The Golden Temple, also known as Sri Harmandir Sahib, is a Gurdwara located in the city of Amritsar, Punjab, India. It is one of the most revered spiritual sites in Sikhism and attracts millions of visitors from around the world every year.</p>
+        <p>The temple complex is known for its stunning architecture, serene surroundings, and the sacred Amrit Sarovar (Pool of Nectar) that surrounds the main shrine. Visitors can experience the rich Sikh heritage, participate in prayer ceremonies, and enjoy the langar (community kitchen) that serves free meals to all visitors regardless of religion, caste, or creed.</p>
+        <p>Whether you seek spiritual solace or wish to immerse yourself in the vibrant culture of Punjab, a visit to the Golden Temple is an unforgettable experience.</p>
+        <a href="/register" class="button">Ready to embark on a spiritual journey? Register Now!</a>
+    </div>
+</body>
+</html>

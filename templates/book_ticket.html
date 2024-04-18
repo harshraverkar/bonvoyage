@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Tours Booking</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Temple Tours Booking</h1>
+    </header>
+
+    <main>
+        <div class="centered-heading">
+            <h2>Choose a Temple Tour:</h2>
+        </div>
+        <div class="booking-form-container">
+            <form action="/submit" method="post" class="booking-form" onsubmit="return validateForm()">
+                <label for="tour">Select Temple Tour:</label>
+                <select id="tour" name="tour" class="input-field">
+                    <option value="konark">Konark Sun Temple</option>
+                    <option value="golden">Golden Temple, Amritsar</option>
+                    <option value="tirupati">Tirupati Balaji Temple</option>
+                    <option value="varanasi">Varanasi Temples</option>
+                    <option value="meenakshi">Meenakshi Temple, Madurai</option>
+                </select>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" name="date" class="input-field" required>
+
+                <label for="method">Select Booking Method:</label>
+                <select id="method" name="method" class="input-field" onchange="togglePaymentFields()">
+                    <option value="online">Online Booking</option>
+                    <option value="upi">UPI Payment</option>
+                </select>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="input-field" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="input-field" required>
+
+                <div id="cardFields" style="display: none;">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" class="input-field">
+
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" class="input-field">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" class="input-field">
+
+                    <label for="cardType">Card Type:</label>
+                    <input type="text" id="cardType" name="cardType" class="input-field">
+                </div>
+
+                <div id="upiFields" style="display: none;">
+                    <label for="upiId">UPI ID: (e.g., john.doe@okaxis):</label>
+                    <input type="text" id="upiId" name="upiId" class="input-field">
+                </div>
+
+                <button type="submit" class="submit-button">Book Now</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function togglePaymentFields() {
+            var method = document.getElementById("method").value;
+            var cardFields = document.getElementById("cardFields");
+            var upiFields = document.getElementById("upiFields");
+    
+            if (method === "upi") {
+                cardFields.style.display = "none";
+                upiFields.style.display = "block";
+            } else {
+                cardFields.style.display = "block";
+                upiFields.style.display = "none";
+            }
+        }
+    
+        function validateForm() {
+            var method = document.getElementById("method").value;
+            var selectedDate = new Date(document.getElementById("date").value);
+            var currentDate = new Date();
+            currentDate.setHours(0, 0, 0, 0);
+    
+            if (selectedDate < currentDate) {
+                alert("Please select a date equal to or later than today, Since All Booking have Been Reserved For Today.");
+                return false;
+            }
+    
+            if (method === "upi") {
+                var upiId = document.getElementById("upiId").value;
+                if (!validateUpiId(upiId)) {
+                    alert("Please enter a valid UPI ID.");
+                    return false;
+                }
+            } else {
+                var cardNumber = document.getElementById("cardNumber").value;
+                var expiryDate = document.getElementById("expiryDate").value;
+                var cvv = document.getElementById("cvv").value;
+    
+                if (cardNumber === "" || expiryDate === "" || cvv === "") {
+                    alert("Please fill in all card details.");
+                    return false;
+                }
+            }
+    
+            return true;
+        }
+    
+        function validateUpiId(upiId) {
+            var upiRegex = /^[a-zA-Z0-9._-]+@okaxis$/;
+            return upiRegex.test(upiId);
+        }
+    
+    </script>
+    
+
+</body>
+
+</html>

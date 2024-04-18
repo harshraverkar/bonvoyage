@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Tours in India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            background-image: linear-gradient(to bottom right, #e0c3fc, #8ec5fc);
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .tour {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .tour img {
+            max-width: 200px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .tour-details {
+            flex: 1;
+        }
+        .details-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .details-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Temple Tours in India</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/contact_floating_bar" target="_blank">Contact Us</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Temple Tours</h2>
+            <p>India is home to numerous ancient and revered temples, each with its own unique history and significance. Our temple tours offer an immersive experience for those seeking spiritual enlightenment and cultural enrichment.</p>
+        </section>
+        <section id="tours">
+            <h2>Featured Temple Tours</h2>
+            <div class="tour">
+                <img src="{{ url_for('static', filename='golden_temple.jpg') }}" alt="Golden Temple">
+                <div class="tour-details">
+                    <h3>Golden Temple - Amritsar, Punjab</h3>
+                    <p>The Golden Temple, also known as Sri Harmandir Sahib, is a Gurdwara located in the city of Amritsar, Punjab, India.</p>
+                    <a href="/golden_temple_details" class="details-button">View Details</a>
+                </div>
+            </div>
+            <div class="tour">
+                <img src="{{ url_for('static', filename='tirupati_balaji_temple.jpg') }}" alt="Golden Temple">
+                <div class="tour-details">
+                    <h3>Tirupati Balaji Temple - Andhra Pradesh</h3>
+                    <p>The Tirumala Venkateswara Temple is a landmark Vaishnavite temple situated in the hill town of Tirumala at Tirupati in Andhra Pradesh, India.</p>
+                    <a href="/tirupati_balaji_temple_details" class="details-button">View Details</a>
+                </div>
+            </div>
+            <div class="tour">
+                <img src="{{ url_for('static', filename='meenakshi_temple.jpg') }}" alt="Golden Temple">
+                <div class="tour-details">
+                    <h3>Meenakshi Temple - Madurai, Tamil Nadu</h3>
+                    <p>Meenakshi Amman Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India.</p>
+                    <a href="/meenakshi_temple_details" class="details-button">View Details</a>
+                </div>
+            </div>
+            <div class="tour">
+                <img src="{{ url_for('static', filename='Varanasi_temple.jpg') }}" alt="Golden Temple">
+                <div class="tour-details">
+                    <h3>Varanasi Temples - Uttar Pradesh</h3>
+                    <p>Varanasi, also known as Kashi and Banaras, is a major religious hub in India and home to several temples along the banks of the Ganges River.</p>
+                    <a href="/varanasi_temples_details" class="details-button">View Details</a>
+                </div>
+            </div>
+            <div class="tour">
+                <img src="{{ url_for('static', filename='Konark_Sun_temple.jpg') }}" alt="Golden Temple">
+                <div class="tour-details">
+                    <h3>Konark Sun Temple - Odisha</h3>
+                    <p>The Konark Sun Temple is a 13th-century Hindu temple dedicated to the sun god located in the town of Konark, Odisha, India.</p>
+                    <a href="/konark_sun_temple_details" class="details-button">View Details</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

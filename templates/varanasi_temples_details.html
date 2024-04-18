@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varanasi Temples Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            width: 800px;
+            height: 533.6px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Varanasi Temples - Uttar Pradesh</h1>
+    <img src="{{ url_for('static', filename='Varanasi_temple.jpg') }}" alt="Varanasi_temple">
+    <p>Varanasi, also known as Banaras or Kashi, is a city on the banks of the Ganges in Uttar Pradesh, India. It is considered one of the holiest cities in Hinduism.</p>
+    <p>More detailed information about Varanasi Temples can be added here.</p>
+    <a href="/register" class="button">Wanna Go On A Ride? Register Now!</a>
+    <script>
+        function redirectToBooking() {
+            window.location.href = "book_ticket.html";
+        }
+    </script>
+</body>
+</html>

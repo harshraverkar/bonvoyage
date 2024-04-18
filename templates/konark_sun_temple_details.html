@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konark Sun Temple Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            width: 800px;
+            height: 533.6px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Konark Sun Temple - Odisha</h1>
+        <img src="{{ url_for('static', filename='Konark_sun_temple.jpg') }}" alt="Konark_sun_temple">
+        <p>The Konark Sun Temple is a 13th-century CE Sun Temple at Konark in Odisha, India. It is believed to have been built by King Narasimhadeva I of the Eastern Ganga Dynasty. The temple is dedicated to the Hindu sun god Surya.</p>
+        <p>The temple complex is designed in the shape of a gigantic chariot with elaborately carved stone wheels, pillars, and walls. It is a UNESCO World Heritage Site and is considered one of the finest examples of Kalinga architecture.</p>
+        <p>Visitors to the Konark Sun Temple can marvel at its intricate stone carvings depicting various mythological scenes, celestial beings, and daily life activities. The temple also hosts a yearly dance festival, the Konark Dance Festival, showcasing classical Indian dance forms.</p>
+        <p>Plan your visit to the Konark Sun Temple today and immerse yourself in the rich cultural heritage of India!</p>
+        <a href="/register" class="button">Book Your Temple Tour Now!</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meenakshi Temple Details</title>
+    <style>
+        /* Internal CSS for all temple pages */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        img {
+            width: 800px;
+            height: 533.6px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meenakshi Temple - Madurai, Tamil Nadu</h1>
+        <img src="{{ url_for('static', filename='meenakshi_temple.jpg') }}" alt="Meenakshi Temple">
+        <p>Meenakshi Amman Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to Meenakshi, an avatar of the Hindu goddess Parvati, and her consort, Sundareswarar, an avatar of Lord Shiva.</p>
+        <p>The temple complex is known for its magnificent architecture, including its towering gopurams (gateway towers) adorned with thousands of colorful sculptures depicting various deities, mythical creatures, and scenes from Hindu legends.</p>
+        <p>Visitors to the Meenakshi Temple can explore its vast courtyards, halls, and shrines, each with its own unique architectural and religious significance. The temple is a hub of religious and cultural activities, hosting festivals, rituals, and ceremonies throughout the year.</p>
+        <p>Plan your visit to the Meenakshi Temple and immerse yourself in the rich spiritual and cultural heritage of Tamil Nadu!</p>
+        <a href="/register" class="button">Ready to embark on a spiritual journey? Register Now!</a>
+    </div>
+</body>
+</html>

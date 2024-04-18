@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Floating Bar</title>
+    <style>
+        /* CSS styles for the container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* CSS styles for the floating bar */
+        .floating-bar {
+            background-color: #f2f2f2;
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+        }
+
+        .floating-bar h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .floating-bar p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .floating-bar a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .floating-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .floating-bar form {
+            margin-top: 10px;
+        }
+
+        .floating-bar input[type="text"],
+        .floating-bar input[type="email"],
+        .floating-bar textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .floating-bar input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .floating-bar input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="floating-bar">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="mailto:info@templetours.in">info@templetours.in</a></p>
+            <p>Phone: +91 1234567890</p>
+            <h3>Send us a Message</h3>
+            <form action="/submit_contact" method="post">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
